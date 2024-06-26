@@ -21,6 +21,13 @@ class ApplicationController < ActionController::Base
   end
   helper_method :cart_subtotal_cents
 
+  def cart_empty 
+    if cart.length == 0 
+      return true  
+    end
+    false
+  end
+  helper_method :cart_empty
 
   def update_cart(new_cart)
     cookies[:cart] = {
