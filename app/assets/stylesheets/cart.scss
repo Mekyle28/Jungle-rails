@@ -31,13 +31,23 @@
       margin: 0;      
     }
 
+    span {
+      margin-top: 1rem;
+    }
+
     .jungle-button{
       border-radius: 0.25em;
       border: 0.1em solid rgba(0, 130, 29, 0.8);
       background: rgba(0, 130, 29, 0.7);
       color: white;
-      padding: 1.5px 3px;
+      padding: .3rem;
+      font-size: medium;
       text-decoration: none;
+      font-weight: 800;
+      font-family: "Montserrat";
+      text-transform: uppercase;
+      font-style: italic;
+      margin-top: 5px;
     }
   }
 }
