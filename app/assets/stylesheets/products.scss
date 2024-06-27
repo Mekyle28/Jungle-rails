@@ -89,7 +89,7 @@ main section.categories-show {
       }
       div {
         display: flex;
-        justify-content: space-between;
+        justify-content:flex-end;
         padding: 0.5em;
         form {
           display: inline-block;
