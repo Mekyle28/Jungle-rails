@@ -111,3 +111,14 @@ form.button_to {
 .text-danger {
   color: #f38792 !important;
 }
+
+.login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  margin: auto 0;
+  font-family: "Montserrat";
+  color: white;
+}
