@@ -74,7 +74,36 @@ RSpec.describe User, type: :model do
 
   describe '.authenticate_with_credentials' do
     
-    it ""
+    it "signs in a user if they login with valid info" do
+      user = User.create(first_name: "Daisy", last_name: "Duke", email: "dd@gamil.com", password: "123456", password_confirmation: "123456")
+      auth_user = User.authenticate_with_credentials("dd@gamil.com", "123456")
+      expect(auth_user).to eql(user)
+    end
+
+    it "signs in a user if they put some extra spaces before/after their email" do
+      user = User.create(first_name: "Daisy", last_name: "Duke", email: "dd@gamil.com", password: "123456", password_confirmation: "123456")
+      auth_user = User.authenticate_with_credentials("   dd@gamil.com  ", "123456")
+      expect(auth_user).to eql(user)
+    end
+
+    it "signs in a user if they put the wrong case in their email" do
+      user = User.create(first_name: "Daisy", last_name: "Duke", email: "dd@gamil.com", password: "123456", password_confirmation: "123456")
+      auth_user = User.authenticate_with_credentials("DD@gaMil.coM", "123456")
+      expect(auth_user).to eql(user)
+    end
+
+    it "should returns nill if the email doesn't match the db info" do
+      user = User.create(first_name: "Daisy", last_name: "Duke", email: "dd@gamil.com", password: "123456", password_confirmation: "123456")
+      auth_user = User.authenticate_with_credentials("ddd@gamil.com", "123456")
+      expect(auth_user).to eql(nil)
+    end
+
+    it "should returns nill if the password doesn't match the db info" do
+      user = User.create(first_name: "Daisy", last_name: "Duke", email: "dd@gamil.com", password: "123456", password_confirmation: "123456")
+      auth_user = User.authenticate_with_credentials("dd@gamil.com", "12345")
+      expect(auth_user).to eql(nil)
+    end
+
   end
 
 end
