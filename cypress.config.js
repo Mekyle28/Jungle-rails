@@ -1,4 +1,4 @@
-const { defineConfig } = require('cypress')
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   // setupNodeEvents can be defined in either
@@ -7,9 +7,13 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
         /* ... */
-      })
+      });
     },
   },
+  env: {
+    RAILS_ENV: 'test'
+  },
+
   screenshotsFolder: "tmp/cypress_screenshots",
   videosFolder: "tmp/cypress_videos",
   trashAssetsBeforeRuns: false
