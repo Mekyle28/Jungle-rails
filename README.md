@@ -1,6 +1,15 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+This project is a mini e-commerce application developed with Ruby on Rails 6.1. It was created to gain proficiency in Ruby and the Rails framework through debugging, implementing new features, and refining existing functionalities. Some of the changes include:
+  - Admin Security: Implemented HTTP Basic Auth to secure access to admin pages.
+  - Category Management: Added functionality for admins to create and manage product categories.
+  - User Authentication: Introduced user authentication using has_secure_password for secure password handling.
+  - Inventory Management: Modified product display to replace the add button with a sold out button when products are out of stock.
+  - Cart Enhancements: Implemented an empty cart message when users attempt to checkout with no items in their cart.
+
+## Application Screenshots 
+![Jungle main page, inclueds nav bar and rows of plant for sale](url_to_image)
+
 
 ## Setup
 
