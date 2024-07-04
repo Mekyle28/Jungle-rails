@@ -1,6 +1,6 @@
 # Jungle
 
-This project is a mini e-commerce application developed with Ruby on Rails 6.1. It was created to gain proficiency in Ruby and the Rails framework through debugging, implementing new features, and refining existing functionalities. Some of the changes include:
+This project is a mini e-commerce application developed with Ruby on Rails 6.1. It was created to gain proficiency in Ruby and the Rails framework through debugging, working with an existing code base, implementing new features, and refining existing functionalities. Some of the changes include:
   - Admin Security: Implemented HTTP Basic Auth to secure access to admin pages.
   - Category Management: Added functionality for admins to create and manage product categories.
   - User Authentication: Introduced user authentication using has_secure_password for secure password handling.
@@ -8,7 +8,12 @@ This project is a mini e-commerce application developed with Ruby on Rails 6.1. 
   - Cart Enhancements: Implemented an empty cart message when users attempt to checkout with no items in their cart.
 
 ## Application Screenshots 
-![Jungle main page, inclueds nav bar and rows of plant for sale](url_to_image)
+!["Jungle main page, inclueds nav bar and rows of plant for sale"](https://github.com/Mekyle28/Jungle-rails/blob/feature/cypress/docs/jungle%20products%20page.png?raw=true)
+
+!["Jungle main product description page, features the Giant Tea plant and a soldout badge"](https://github.com/Mekyle28/Jungle-rails/blob/feature/cypress/docs/jungle%20product%20info.png?raw=true)
+
+!["Jungle cart page"](https://github.com/Mekyle28/Jungle-rails/blob/feature/cypress/docs/jungle%20cart.png?raw=true)
+
 
 
 ## Setup
